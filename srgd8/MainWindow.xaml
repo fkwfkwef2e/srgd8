@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfSerializationApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Name:" Margin="0,0,10,0"/>
+            <TextBox x:Name="NameTextBox" Width="150"/>
+            <TextBlock Text="Age:" Margin="0,0,10,0"/>
+            <TextBox x:Name="AgeTextBox" Width="50"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Vertical" Margin="10">
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Button x:Name="SerializeButton" Content="Serialize" Click="SerializeButton_Click" Margin="0,0,10,0"/>
+                <Button x:Name="DeserializeButton" Content="Deserialize" Click="DeserializeButton_Click" Margin="0,0,10,0"/>
+            </StackPanel>
+            <TextBox x:Name="ResultTextBox" Margin="0,10,0,0" AcceptsReturn="True" ScrollViewer.VerticalScrollBarVisibility="Auto"/>
+        </StackPanel>
+    </Grid>
+</Window>
